@@ -1,0 +1,47 @@
+:root {
+  --brand-green: #C7EA46;
+  --brand-pink: #FF6EC7;
+  --bg: #ffffff;
+  --fg: #0f1724;
+  --muted: #6b7280;
+}
+
+[data-theme="dark"] {
+  --bg: #071122;
+  --fg: #e6eef8;
+  --muted: #94a3b8;
+}
+
+html, body, #root { height:100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Header / brand */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  background: linear-gradient(90deg, rgba(199,234,70,0.04), rgba(255,110,199,0.02));
+}
+.brand { display:flex; gap:.75rem; align-items:center; }
+.brand img { height:56px; width:auto; display:block; }
+.title { font-weight:700; font-size:1.25rem; color:var(--fg); }
+.slogan { font-size:0.875rem; color:var(--muted); }
+
+/* theme toggle button */
+.theme-toggle {
+  background: transparent;
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius:8px;
+  padding:8px;
+  cursor:pointer;
+}
